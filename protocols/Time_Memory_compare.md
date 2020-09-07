@@ -12,7 +12,7 @@ Only use bowie, 10 processors (if parallelization is allowed)
 Different tools use different file formats. You can first copy over the genbank files, and then convert them to GFF and Fasta. 
 * panX, BFClust.py: GBK
 * UClust, CD-HIT: Fasta
-R* oary, PIRATE, Panaroo: GFF3
+* Roary, PIRATE, Panaroo: GFF3
 
 Use (randomly selected) 25, 50, 100, 150, 200, 250 genomes from the Maela set.     
 Copy the gbk files from here: ```/store/home/surujon/GBKs/Chewapreecha/```    
@@ -79,3 +79,12 @@ nohup /usr/bin/time -v roary -f ./output/Roary/M5 -e -n -v input/GFF3/M5/*.gff -
 
 
 ### BFClust.py
+You need to run this in a conda environment (requires python 3.6 and some other dependencies). So activate the clustering environment: 
+```
+conda activate clustering
+```
+Then run BFClust (it automatically uses 10 processors) 
+```
+nohup /usr/bin/time -v  BFC.py -i ./input/GBK/M5/ -o ./output/BFClust/M5 -n 10 -t 0.1 -m 10 > ./output/BFClust/M5_BFClust.log &
+```
+
