@@ -18,6 +18,9 @@ Use (randomly selected) 25, 50, 100, 150, 200, 250 genomes from the Maela set.
 Copy the gbk files from here: ```/store/home/surujon/GBKs/Chewapreecha/```    
 Make one sub-directory for each set (M25, M50, M100, ...) under ```/store/data/Clustering/input/GBK/``` and copy the genomes there.     
 Use ```/store/data/Clustering/input/genbank2gff3_Maela.py``` to convert GBK --> GFF3    
+
+As an example, I used a smaller dataset of 5 genomes (M5) for each step below.     
+
 ```
 mkdir GFF3/M5
 python genbank2gff3_Maela.py -i GBK/M5 -o GFF3/M5
@@ -68,7 +71,9 @@ nohup /usr/bin/time -v  /store/home/surujon/UCLUST/usearch11.0 -cluster_fast ./i
 
 
 ### Roary
-
+```
+nohup /usr/bin/time -v roary -f ./output/Roary/M5 -e -n -v input/GFF3/M5/*.gff -p 10 > ./output/Roary/M5_Roary.log > ./output/Roary/M5_Roary.log &
+```
 
 ### PanX
 
