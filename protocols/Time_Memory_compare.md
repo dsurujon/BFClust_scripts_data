@@ -96,7 +96,7 @@ conda activate clustering
 nohup /usr/bin/time -v PIRATE -i ./input/GFF3/M5 -o ./output/PIRATE/M5 -t 10 > ./ouptut/PIRATE/M5_PIRATE.log &
 ```
 
-### Panaroo - Something is up with the Biopython installation. 
+### Panaroo 
 Easiest to do on the ```panaroo_env``` conda environment
 ```
 conda activate panaroo_env
