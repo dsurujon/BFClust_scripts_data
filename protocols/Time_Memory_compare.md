@@ -64,15 +64,9 @@ The relevant pieces of information will be "User time (seconds)" and "Maximum re
 nohup /usr/bin/time -v  /store/home/surujon/UCLUST/usearch11.0 -cluster_fast ./input/Fasta/M5.fasta -id 0.7 -minsl 0.7 -uc ./output/UClust/M5.out > ./output/UClust/M5_UClust.log &
 ```
 
-### PIRATE
-
-
-### Panaroo
-
-
 ### Roary
 ```
-nohup /usr/bin/time -v roary -f ./output/Roary/M5 -e -n -v input/GFF3/M5/*.gff -p 10 > ./output/Roary/M5_Roary.log > ./output/Roary/M5_Roary.log &
+nohup /usr/bin/time -v roary -f ./output/Roary/M5 -e -n -v input/GFF3/M5/*.gff -p 10 > ./output/Roary/M5_Roary.log &
 ```
 
 ### PanX
@@ -86,5 +80,20 @@ conda activate clustering
 Then run BFClust (it automatically uses 10 processors) 
 ```
 nohup /usr/bin/time -v  BFC.py -i ./input/GBK/M5/ -o ./output/BFClust/M5 -n 10 -t 0.1 -m 10 > ./output/BFClust/M5_BFClust.log &
+```
+Note: you will stay in the clustering environment untill you log off or deactivate. Use ```conda deactivate``` to go back to the base environment.     
+
+### PIRATE
+This one is also on the ```clustering``` conda environment
+```
+conda activate clustering
+nohup /usr/bin/time -v PIRATE -i ./input/GFF3/M5 -o ./output/PIRATE/M5 -t 10 > ./ouptut/PIRATE/M5_PIRATE.log &
+```
+
+### Panaroo - Something is up with the Biopython installation. 
+Easiest to do on the ```panaroo_env``` conda environment
+```
+conda activate panaroo_env
+nohup /usr/bin/time -v panaroo -i ./input/GFF3/M5/* -o ./output/Panaroo/M5 -t 10 --clean-mode sensitive > ./output/Panaroo/M5_Panaroo.log &
 ```
 
