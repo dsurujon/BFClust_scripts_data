@@ -70,7 +70,13 @@ nohup /usr/bin/time -v roary -f ./output/Roary/M5 -e -n -v input/GFF3/M5/*.gff -
 ```
 
 ### PanX
-
+Best to run in the ```panX``` environment
+panX re-arranges the input GBK folder. So copy the GBKs into the output/panX directory and use that for all panX operations
+```
+mkdir ./output/PanX/M5/
+cp ./input/GBK/M5/* ./output/PanX/M5/
+nohup /usr/bin/time -v /store/home/surujon/panX/pan-genome-analysis/panX.py -fn ./output/PanX/M5 -sl M5 -t 10 > ./output/PanX/M5_panX.log &
+```
 
 ### BFClust.py
 You need to run this in a conda environment (requires python 3.6 and some other dependencies). So activate the clustering environment: 
