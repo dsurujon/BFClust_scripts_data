@@ -70,7 +70,7 @@ nohup /usr/bin/time -v roary -f ./output/Roary/M5 -e -n -v input/GFF3/M5/*.gff -
 ```
 
 ### PanX
-Best to run in the ```panX``` environment    
+Best to run in the ```panX``` environment. Refer to the [PanX documentation](https://github.com/neherlab/pan-genome-analysis#installing-dependencies) for instructions on how to set up the panX environment.     
 panX re-arranges the input GBK folder. So copy the GBKs into the output/panX directory and use that for all panX operations
 ```
 mkdir ./output/PanX/M5/
