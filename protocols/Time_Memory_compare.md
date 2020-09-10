@@ -71,7 +71,11 @@ nohup /usr/bin/time -v  /store/home/surujon/UCLUST/usearch11.0 -cluster_fast ./i
 ```
 
 ### Roary
+Use the Roary environment 
 ```
+conda env create -f roary_env.yml    
+conda activate roary_env
+
 nohup /usr/bin/time -v roary -f ./output/Roary/M5 -e -n -v input/GFF3/M5/*.gff -p 10 > ./output/Roary/M5_Roary.log &
 ```
 
