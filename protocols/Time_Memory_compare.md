@@ -80,9 +80,10 @@ nohup /usr/bin/time -v /store/home/surujon/panX/pan-genome-analysis/panX.py -fn 
 ```
 
 ### BFClust.py
-You need to run this in a conda environment (requires python 3.6 and some other dependencies). So activate the clustering environment: 
+You need to run this in a conda environment (requires python 3.6 and some other dependencies). Copy the file [bfclust_env.yml](https://github.com/dsurujon/BFClust_scripts_data/blob/master/protocols/bfclust_env.yml) into your directory. Then create the BFClust environment and activate:  
 ```
-conda activate clustering
+conda env create -f bfclust_env.yml    
+conda activate bfclust_env
 ```
 Then run BFClust (it automatically uses 10 processors) 
 ```
@@ -91,15 +92,17 @@ nohup /usr/bin/time -v  BFC.py -i ./input/GBK/M5/ -o ./output/BFClust/M5 -n 10 -
 Note: you will stay in the clustering environment untill you log off or deactivate. Use ```conda deactivate``` to go back to the base environment.     
 
 ### PIRATE
-This one is also on the ```clustering``` conda environment
+This one requires the [pirate_env.yml](https://github.com/dsurujon/BFClust_scripts_data/blob/master/protocols/pirate_env.yml) conda environment
 ```
-conda activate clustering
+conda env create -f pirate_env.yml    
+conda activate pirate_env
 nohup /usr/bin/time -v PIRATE -i ./input/GFF3/M5 -o ./output/PIRATE/M5 -t 10 > ./ouptut/PIRATE/M5_PIRATE.log &
 ```
 
 ### Panaroo 
-Easiest to do on the ```panaroo_env``` conda environment
+Easiest to do on the [panaroo_env](https://github.com/dsurujon/BFClust_scripts_data/blob/master/protocols/panaroo_env.yml) conda environment
 ```
+conda env create -f panaroo_env.yml 
 conda activate panaroo_env
 nohup /usr/bin/time -v panaroo -i ./input/GFF3/M5/* -o ./output/Panaroo/M5 -t 10 --clean-mode sensitive > ./output/Panaroo/M5_Panaroo.log &
 ```
