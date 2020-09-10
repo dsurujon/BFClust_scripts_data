@@ -47,7 +47,13 @@ nohup /usr/bin/time -v [clustering command] > logfile.txt &
 
 Run each of these from ```/store/data/Clustering/```
 ### CD-HIT
-This uses 10 processors, unlimited memory    
+Best to work in a conda environment where cd-hit is already installed e.g. ```pirate_env```. Copy the [pirate_env.yml](https://github.com/dsurujon/BFClust_scripts_data/blob/master/protocols/pirate_env.yml) file into the directory you're in and then run the following to create and actiavte this environment: 
+```
+conda env create -f pirate_env.yml    
+conda activate pirate_env
+```
+
+This uses 10 processors, unlimited memory
 ```
 cd-hit -i ./input/Fasta/M5.fasta -o ./output/CDHIT/M5.out -d 0 -n 4 -c 0.7 -G 1 -s 0.7 -g 1 -M 0 -T 10
 ```
