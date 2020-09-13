@@ -94,7 +94,8 @@ You need to run this in a conda environment (requires python 3.6 and some other 
 ```
 conda env create -f bfclust_env.yml    
 conda activate bfclust_env
-```
+``` 
+*Note: most recent version is 0.1.24 (as of 09/13/20), use the installation instructions on the [BFClust-python repo](https://github.com/dsurujon/BFClust-python) to get the most recent version*     
 Then run BFClust (it automatically uses 10 processors) 
 ```
 nohup /usr/bin/time -v  BFC.py -i ./input/GBK/M5/ -o ./output/BFClust/M5 -n 10 -t 0.1 -m 10 > ./output/BFClust/M5_BFClust.log &
