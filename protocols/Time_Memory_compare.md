@@ -107,7 +107,7 @@ This one requires the [pirate_env.yml](https://github.com/dsurujon/BFClust_scrip
 ```
 conda env create -f pirate_env.yml    
 conda activate pirate_env
-nohup /usr/bin/time -v PIRATE -i ./input/GFF3/M5 -o ./output/PIRATE/M5 -t 10 > ./ouptut/PIRATE/M5_PIRATE.log &
+nohup /usr/bin/time -v PIRATE -i ./input/GFF3/M5 -o ./output/PIRATE/M5 -t 10 > ./output/PIRATE/M5_PIRATE.log &
 ```
 
 ### Panaroo 
