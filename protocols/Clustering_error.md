@@ -16,12 +16,14 @@ python process_cluster_out.py -i ./UClust/synthetic/1e-12.out -o ./synthetic_tsv
 ```
 
 3. Roary output
-Use this script
+Use [this script](https://github.com/dsurujon/BFClust_scripts_data/blob/master/scripts/process_roary.py)
 ```
 python ./output/process_roary.py -i ./test/gene_presence_absence.csv -o ./test/testout.tsv
 ```
 
 
-
 4. PanX output
-
+Use [this script](https://github.com/dsurujon/BFClust_scripts_data/blob/master/scripts/process_panX.py)
+```
+python ./output/process_panX.py -i ./test/allclusters_final.tsv -o ./test/panX_out_test.tsv
+```
