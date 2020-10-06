@@ -31,6 +31,6 @@ python ./output/process_panX.py -i ./test/allclusters_final.tsv -o ./test/panX_o
 5. PIRATE output
 Use [this script](https://github.com/SionBayliss/PIRATE/blob/master/tools/convert_format/PIRATE_to_roary.pl) from the PIRATE repository to convert to roary gene_presence_absence format, then use ```process_roary.py``` as above.
 ```
-PIRATE_to_roary.pl -i ./output/PIRATE/synthetic/1e-12/PIRATE.gene_families.tsv -o ./output/PIRATE/synthetic/roary_formatted/PIRATE_1e-12_roary.csv
+perl PIRATE_to_roary.pl -i ./output/PIRATE/synthetic/1e-12/PIRATE.gene_families.tsv -o ./output/PIRATE/synthetic/roary_formatted/PIRATE_1e-12_roary.csv
 python ./output/process_roary.py -i ./output/PIRATE/synthetic/roary_formatted/PIRATE_1e-12_roary.csv -o ./output/synthetic_tsv/PIRATE_1e-12.tsv
 ```
