@@ -2,7 +2,8 @@
 This directory supplements the BFClust publication by Surujon et al., and includes all custom code and data files. 
 
 ## protocols
-Set of markdown files as guides to run all pipelines
+Set of markdown files as guides to run all pipelines      
+In addition, the jupyter notebook `Prochlorococcus.ipynb` has example code that is used for processing clustering output for one dataset     
 
 ## scripts
 Custom scripts used in any pre/post-processing    
