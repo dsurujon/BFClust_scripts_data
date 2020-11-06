@@ -13,4 +13,4 @@ Custom scripts used in any pre/post-processing
 
 
 ## data
-Data files
+Data files - each labeled with the figure the data corresponds to
